@@ -166,6 +166,7 @@ div .selected-cola{
     width: 200px;
     height: 106px;
     overflow-y:scroll;
+    overflow-x:hidden;
     background-color: #EAE8FE;
     border:1px solid #bdbdbd;
     box-sizing: border-box;
