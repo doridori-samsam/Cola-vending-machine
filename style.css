@@ -447,7 +447,7 @@ span.total-amount{
 
 /*반응형 레이아웃*/
 
-@media only screen and (min-device-width: 280px) and (max-device-width: 600px), (-webkit-min-device-pixel-ratio:2){
+@media only screen and (min-device-width: 280px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio:2){
     body{ 
         background-color: white;
     }
@@ -461,18 +461,7 @@ span.total-amount{
         z-index: 10;
     }
     
-    main.container{
-        position: relative; /*z-index 적용하기 위해 설정*/
-        margin-top: -13px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0px;
-    }
-
-    section.status{
-        margin-top: -11px;
-    }
+ 
 } 
  
  
