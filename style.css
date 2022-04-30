@@ -458,11 +458,11 @@ span.total-amount{
         display:block;
         margin:0 auto;
         position: relative; /*z-index 적용하기 위해 설정*/
+        z-index: 10;
     }
     
     main.container{
         position: relative; /*z-index 적용하기 위해 설정*/
-        z-index: -1;
         margin-top: -13px;
         display: flex;
         flex-wrap: wrap;
