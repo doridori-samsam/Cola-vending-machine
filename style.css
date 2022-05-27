@@ -44,6 +44,10 @@ ul{
     gap: 12px;
     width: 306px;
 }
+
+ul li {
+    flex-basis: 94px;
+}
     
 
 
@@ -67,7 +71,6 @@ li button{
     position:relative;
     font-size: 9px;
     background-color: #fff;
-    flex-basis: 94px;
     height: 130px;
     border:1px solid lightgray;
     box-sizing: border-box;
