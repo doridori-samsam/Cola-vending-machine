@@ -1,483 +1,458 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 
-body{
-    padding:0;
-    margin: 0;
-    background-color: #EAE8FE;
-    font-family: 'Noto Sans KR', sans-serif;
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eae8fe;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-
-.logo{
-    width: 386px;
-    display:block;
-    margin:0 auto;
+.logo {
+  width: 386px;
+  display: block;
+  margin: 0 auto;
 }
 
-.container{
-    width: fit-content; 
-    height: fit-content;
-    margin: 0px auto;
-    margin-top: 68px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
+.container {
+  width: fit-content;
+  height: fit-content;
+  margin: 0px auto;
+  margin-top: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
 }
 
 /* 왼쪽 벤딩머신 메뉴 */
-.machine{
-    background-color: #fff;
-    width: 360px;
-    height: 545px;
-    position: relative;
+.machine {
+  background-color: #fff;
+  width: 360px;
+  height: 545px;
+  position: relative;
 }
 
-
-ul{
-    position:absolute;
-    top: 31px;
-    left: 27px;
-    display:inline-block;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 306px;
+ul {
+  position: absolute;
+  top: 31px;
+  left: 27px;
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 306px;
 }
 
 ul li {
-    flex-basis: 94px;
-}
-    
-
-
-ul li.sold-out::after{
-    content:'';
-    display: block;
-    position: absolute;
-    top: 0px;
-    width: 94px;
-    height: 130px;
-    border-radius: 10px;
-    background-image: url('src/images/Sold-out.png');
-    background-color: rgba(0, 0, 0, 0.8);
-    background-position: 19px 49px;
-    background-size: 57px 45px;
-    background-repeat: no-repeat;
+  flex-basis: 94px;
 }
 
-
-li button{
-    position:relative;
-    font-size: 9px;
-    background-color: #fff;
-    height: 130px;
-    border:1px solid lightgray;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 10px;
-}
-    
-li button:focus{
-    outline:3px solid #6327fe;
-}
-
-button .cola-name{
-    position: absolute;
-    top: 82px;
-    left: 50%;
-    transform:translate(-50%,0);
+ul li button.sold-out::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 94px;
+  height: 130px;
+  border-radius: 10px;
+  background-image: url("src/images/Sold-out.png");
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: 19px 49px;
+  background-size: 57px 45px;
+  background-repeat: no-repeat;
+  cursor: default;
 }
 
-button .price{
-    position: absolute;
-    top:99px;
-    left:50%;
-    transform: translate(-50%,0);
-    font-size: 12px;
-    line-height: 12px;
-    width: fit-content;
-    padding: 5px 15px;
-    background-color:#6327fe;
-    color:#fff;
-    border-radius: 50px;
+li button {
+  position: relative;
+  font-size: 9px;
+  background-color: #fff;
+  /* width: 94px; */
+  height: 130px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
 }
 
-img.cola{
-    width: 36px;
-    height: 65px;
-    position: absolute;
-    bottom: 54px;
-    left: 29px;
-}
-    
-
-div.cal{
-    width: 306px;
-    height: 193px;
-    position:absolute;
-    top: 323px;
-    left: 27px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+li button:focus {
+  outline: 3px solid #6327fe;
 }
 
-
-.cal .change{
-    font-size: 14px;
-    line-height: 20px;
-    width: 200px;
-    height: 32px;
-    background-color: #EAE8FE;
-    border-radius: 5px;
-    box-sizing:border-box;
-    position:relative;
+button .cola-name {
+  position: absolute;
+  top: 82px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
 }
 
-.change-money{
-    position:absolute;
-    top: 6px;
-    left: 10px;
-    
+button .price {
+  position: absolute;
+  top: 99px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 12px;
+  line-height: 12px;
+  width: fit-content;
+  padding: 5px 15px;
+  background-color: #6327fe;
+  color: #fff;
+  border-radius: 50px;
+  pointer-events: none;
 }
 
-.change .change-won{
-    position:absolute;
-    top: 6px;
-    right: 10px;
-}
-    
-
-input[type=text]{
-    padding:0;
-    margin:0;
-    width: 200px;
-    height: 33px;
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-    box-sizing: border-box;
+img.cola {
+  width: 36px;
+  height: 65px;
+  position: absolute;
+  bottom: 54px;
+  left: 29px;
+  pointer-events: none;
 }
 
-input[type=text]:focus{
-    outline: 1px solid #6327fe;
-    box-sizing:border-box;
-    border: none;
+div.cal {
+  width: 306px;
+  height: 193px;
+  position: absolute;
+  top: 323px;
+  left: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
-input[type=text]::placeholder{
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 19px;
-    color: #bdbdbd;
-    padding-left: 6px;
-    font-family: 'Noto Sans KR', sans-serif;
+.cal .change {
+  font-size: 14px;
+  line-height: 20px;
+  width: 200px;
+  height: 32px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-
-div .selected-cola{
-    width: 200px;
-    height: 106px;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    background-color: #EAE8FE;
-    border:1px solid #bdbdbd;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding-top:11px;
-    padding-left: 11px;
+.change-money {
+  position: absolute;
+  top: 6px;
+  left: 10px;
 }
 
-div.selected-cola::-webkit-scrollbar{
-    width: 12px;
-}
-    
-div.selected-cola::-webkit-scrollbar-thumb{
-    height: 79px;
-    background: white;
-    background-clip: padding-box;
-    border: 4px solid transparent;
-    border-radius: 50px;
+.change .change-won {
+  position: absolute;
+  top: 6px;
+  right: 10px;
 }
 
-div.selected-cola::-webkit-scrollbar-track{
-    background-color: transparent;
-    border-radius: 50px;
+input[type="number"] {
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 33px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-div.selected{
-    width: 170px;
-    height: 46px;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 9px;
-    line-height: 13px;
-    position:relative;
+input[type="number"]:focus {
+  outline: 1px solid #6327fe;
+  box-sizing: border-box;
+  border: none;
 }
 
-
-
-img.selected-img{
-    position:absolute;
-    width: 18px;
-    height: 33px;
-    top: 6px;
-    left: 10px;
+input[type="number"]::placeholder {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #bdbdbd;
+  padding-left: 6px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-div.selected span{
-    position:absolute;
-    left: 38px;
-    bottom: 18px;
-    font-size: 9px;
-    line-height: 13px;
+div .selected-cola {
+  width: 200px;
+  height: 106px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #eae8fe;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-top: 11px;
+  padding-left: 11px;
 }
 
-div.selected .quantity{
-    position:absolute;
-    border:1px solid #bdbdbd;
-    border-radius: 5px;
-    display:inline-block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size:14px;
-    line-height: 30px;
-    top: 8px;
-    right: 8px;
+div.selected-cola::-webkit-scrollbar {
+  width: 12px;
 }
 
-div.cal button{
-    font-size: 13px;
-    line-height: 19px;
-    font-weight: 500;
+div.selected-cola::-webkit-scrollbar-thumb {
+  height: 79px;
+  background: white;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 50px;
 }
 
-div.cal .change-return{
-    width: 94px;
-    height: 33px;
-    border: 1px solid #bdbdbd;
-    background-color: #fff;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    font-size: 13px;
-    line-height: 18.82px;
-}
-    
-
-
-div.cal .deposit{
-    width: 94px;
-    height: 32px;
-    border: 1px solid #bdbdbd;
-    background-color: #fff;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    font-size: 13px;
-    line-height: 18.82px;
-}
-   
-
-
-div.cal .acquire{
-    width: 94px;
-    height: 106px;
-    padding: 0;
-    color: #fff;
-    background-color:#6327fe;
-    border-radius: 5px;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+div.selected-cola::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 50px;
 }
 
+div.selected {
+  width: 170px;
+  height: 46px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 9px;
+  line-height: 13px;
+  position: relative;
+}
+
+img.selected-img {
+  position: absolute;
+  width: 18px;
+  height: 33px;
+  top: 6px;
+  left: 10px;
+}
+
+div.selected span {
+  position: absolute;
+  left: 38px;
+  bottom: 18px;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+div.selected .quantity {
+  position: absolute;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  top: 8px;
+  right: 8px;
+}
+
+div.cal button {
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 500;
+}
+
+div.cal .change-return {
+  width: 94px;
+  height: 33px;
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-size: 13px;
+  line-height: 18.82px;
+}
+
+div.cal .deposit {
+  width: 94px;
+  height: 32px;
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-size: 13px;
+  line-height: 18.82px;
+}
+
+div.cal .acquire {
+  width: 94px;
+  height: 106px;
+  padding: 0;
+  color: #fff;
+  background-color: #6327fe;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 
 /*오른쪽 박스*/
 
-section.status{
-    width: 360px;
-    height: 545px;
-}
-    
-
-
-div.balance{
-    width: 360px;
-    height: 50px;
-    background-color:#fff;
-    border:1px solid #fff;
-    box-sizing: border-box;
-}
-    
-
-.balance .balance-content{
-    width: 306px;
-    height: 32px;
-    border-radius:5px;
-    background-color:#EAE8FE;
-    margin-top: 8px;
-    margin-left: 27px;
-    position: relative;
-}
-    
-
-.balance-content span{
-    font-size: 14px;
-    line-height: 20px;
+section.status {
+  width: 360px;
+  height: 545px;
 }
 
-
-.balance-content .balance-money{
-    position:absolute;
-    top: 6px;
-    left: 10px;
+div.balance {
+  width: 360px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-sizing: border-box;
 }
 
-.balance-content .balance-won{
-    position:absolute;
-    top: 6px;
-    right: 10px;
-    font-weight: 700;
+.balance .balance-content {
+  width: 306px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #eae8fe;
+  margin-top: 8px;
+  margin-left: 27px;
+  position: relative;
 }
 
-div.my-cola{
-    width: 360px;
-    height: 474px;
-    margin-top: 20px;
-    background-color: #fff;
-    text-align: center;
+.balance-content span {
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.my-cola .my-cola-title{
-    font-size: 14px;
-    font-weight: 700; 
-    display: inline-block;
-    margin-top: 25px;
+.balance-content .balance-money {
+  position: absolute;
+  top: 6px;
+  left: 10px;
 }
 
-div.my-cola-list{
-    width: 306px;
-    height: 364px;
-    margin-top: 13px;
-    margin-left: 27px;
-    padding-top: 12px;
-    border:1px solid #bdbdbd;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #EAE8FE;
-    overflow-y: scroll;
-       
+.balance-content .balance-won {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-weight: 700;
 }
 
-
-div.my-cola-list::-webkit-scrollbar{
-    width: 12px;
-}
- 
-
-div.my-cola-list::-webkit-scrollbar-thumb{
-    /*height px로 안맞춰짐 */
-    background-color: white;
-    background-clip: padding-box;
-    border: 4px solid transparent;
-    border-top: 12px solid transparent; /*스크롤바 thumb 탑 부분 border-radius 없어지는 현상 생김 */ 
-    border-radius: 50px;
-    visibility: visible;
+div.my-cola {
+  width: 360px;
+  height: 474px;
+  margin-top: 20px;
+  background-color: #fff;
+  text-align: center;
 }
 
-div.my-cola-list::-webkit-scrollbar-track{
-    background-color: transparent;
-    border-radius: 50px;
-}
-    
-
-.my-cola-list .my-cola-list-cont{
-    height: 400%;
-} 
-
-.my-cola-list div.box{
-    width: 276px;
-    height: 46px;
-    margin-left: 12px;
-    margin-bottom: 6px;
-    background-color: #fff;
-    border-radius: 5px;
-    position: relative;
-}
-    
-
-.box img{
-    width: 18px;
-    height: 33px;
-    position: absolute;
-    left: 10px;
-    top: 6px;
+.my-cola .my-cola-title {
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 25px;
 }
 
-.box .my-cola-name{
-    font-size: 9px;
-    line-height: 13px;
-    position: absolute;
-    top: 18px;
-    left: 38px;
+div.my-cola-list {
+  width: 306px;
+  height: 364px;
+  margin-top: 13px;
+  margin-left: 27px;
+  padding-top: 12px;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #eae8fe;
+  overflow-y: scroll;
 }
 
-.box .my-quantity{
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    border: 1px solid #bdbdbd;
-    box-sizing: border-box;
-    border-radius: 5px;
+div.my-cola-list::-webkit-scrollbar {
+  width: 12px;
 }
 
-span.total-amount{
-    font-size: 12px;
-    line-height: 17px;
-    display:inline-block;
-    margin-top: 7px;
-    width: 306px;
-    text-align: end;
+div.my-cola-list::-webkit-scrollbar-thumb {
+  /*height px로 안맞춰짐 */
+  background-color: white;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-top: 12px solid transparent; /*스크롤바 thumb 탑 부분 border-radius 없어지는 현상 생김 */
+  border-radius: 50px;
+  visibility: visible;
+}
+
+div.my-cola-list::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+.my-cola-list .my-cola-list-cont {
+  height: 400%;
+}
+
+.my-cola-list div.box {
+  width: 276px;
+  height: 46px;
+  margin-left: 12px;
+  margin-bottom: 6px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box img {
+  width: 18px;
+  height: 33px;
+  position: absolute;
+  left: 10px;
+  top: 6px;
+}
+
+.box .my-cola-name {
+  font-size: 9px;
+  line-height: 13px;
+  position: absolute;
+  top: 18px;
+  left: 38px;
+}
+
+.box .my-quantity {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+span.total-amount {
+  font-size: 12px;
+  line-height: 17px;
+  display: inline-block;
+  margin-top: 7px;
+  width: 306px;
+  text-align: end;
 }
 
 /*반응형 레이아웃*/
 
-@media only screen and (min-device-width: 280px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio:2){
-    body{ 
-        background-color: white;
-    }
-    
-    .logo{
-        width: 166px;
-        height: 70px;
-        display:block;
-        margin:0 auto;
-        position: relative; /*z-index 적용하기 위해 설정*/
-        z-index: 10;
-    }
-    
-    main.container{
-        position: relative; /*z-index 적용하기 위해 설정*/
-        margin-top: -13px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0px;
-    }
+@media only screen and (min-device-width: 200px) and (max-device-width: 480px),
+  (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background-color: white;
+  }
 
-    section.status{
-        margin-top: -11px;
-    } 
-    
-} 
- 
- 
+  .logo {
+    width: 166px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    position: relative; /*z-index 적용하기 위해 설정*/
+    z-index: 10;
+  }
 
+  main.container {
+    position: relative; /*z-index 적용하기 위해 설정*/
+    margin-top: -13px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  section.status {
+    margin-top: -11px;
+  }
+}
