@@ -19,7 +19,7 @@
       <section class="machine">
         <ul>
           <li>
-            <button id="Original" class="choice-btn">
+            <button type="button" id="Original" class="choice-btn">
               <img
                 class="cola"
                 src="src/images/Original_Cola.png"
@@ -90,11 +90,17 @@
             <span class="change-money">잔액 : </span>
             <span class="change-won"></span>
           </div>
-          <input type="number" pattern="[0-9]*" placeholder="입금액 입력" />
+          <input
+            type="number"
+            class="deposit-money"
+            pattern="[0-9]"
+            placeholder="입금액 입력"
+            required
+          />
           <div class="selected-cola"></div>
-          <button class="change-return">거스름돈 반환</button>
-          <button class="deposit">입금</button>
-          <button class="acquire">획득</button>
+          <button type="button" class="change-return">거스름돈 반환</button>
+          <button type="button" class="deposit">입금</button>
+          <button disabled type="button" class="acquire">획득</button>
         </div>
       </section>
 
@@ -103,14 +109,14 @@
         <div class="balance">
           <div class="balance-content">
             <span class="balance-money">소지금 : </span>
-            <span class="balance-won">25,000 원</span>
+            <span class="balance-won"></span>
           </div>
         </div>
-        <div class="my-cola">
+        <div class="my-cola-container">
           <h2 class="my-cola-title">획득한 음료</h2>
           <div class="my-cola-list">
             <div class="my-cola-list-cont">
-              <div class="box first-cola">
+              <div class="my-cola">
                 <img
                   src="src/images/Original_Cola.png"
                   alt="my original cola"
@@ -118,17 +124,12 @@
                 <span class="my-cola-name">Original_Cola</span>
                 <div class="my-quantity">1</div>
               </div>
-              <div class="box second-cola">
+              <div class="my-cola">
                 <img src="src/images/Green_Cola.png" alt="my green cola" />
                 <span class="my-cola-name">Green_Cola</span>
                 <div class="my-quantity">2</div>
               </div>
-              <div class="box third-cola">
-                <img src="src/images/Orange_Cola.png" alt="my orange cola" />
-                <span class="my-cola-name">Orange_Cola</span>
-                <div class="my-quantity">1</div>
-              </div>
-              <div class="box fourth-cola">
+              <div class="my-cola">
                 <img src="src/images/Violet_Cola.png" alt="my violet cola" />
                 <span class="my-cola-name">Violet_Cola</span>
                 <div class="my-quantity">5</div>
