@@ -97,8 +97,7 @@ for (i = 0; i < colaButton.length; i++) {
       //console.log(typeof document.querySelector(".quantity").innerHTML);
     }
 
-    console.log(colaQty);
-    console.log(requiredMoney);
+   
     //재고 소진 시 sold-out 표시
     if (colaQty[colaID] === 0) {
       e.target.disabled = true;
